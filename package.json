@@ -1,0 +1,12 @@
+{
+    "name": "newszone",
+    "description": "A Node app to fetch news from News API and display it to user",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "ejs": "^3.1.5",
+        "express": "^4.17.1"
+    }
+}
