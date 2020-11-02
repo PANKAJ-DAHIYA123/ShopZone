@@ -1,4 +1,2 @@
-import os from "os";
-document.getElementById("sample").innerHTML = `Printing ${os.getenv(
-  "NEWS_API_KEY"
-)}`;
+console.log(process.env.NEWS_API_KEY);
+document.getElementById("news").innerHTML=process.env.NEWS_API_KEY;
