@@ -1,15 +1,20 @@
 {
   "name": "newszone",
   "description": "A Node app to fetch news from News API and display it to user",
-  "type": "module",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "pretty": "prettier --write \"./**/*.{js,jsx,json}\""
   },
   "dependencies": {
     "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
-    "newsapi": "^2.4.1"
+    "newsapi": "^2.4.1",
+    "webpack-node-externals": "^2.5.2"
+  },
+  "devDependencies": {
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0"
   }
 }

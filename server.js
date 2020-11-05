@@ -2,7 +2,7 @@ var express = require("express");
 var app = express();
 require("dotenv").config();
 var port = process.env.PORT || 5500;
-export const key = process.env.NEWS_API_KEY;
+module.exports = process.env.NEWS_API_KEY;
 app.set("view engine", "ejs");
 
 app.use(express.static(__dirname + "/public"));
