@@ -71,10 +71,20 @@
         </form>
       </div>
     </nav>
-    <p id="news"></p>
 
-    <!-- Custom JS to fetch news from News API and inject it using DOM manipulation -->
-    <script src="news.js"></script>
+    <div class="card mb-3">
+      <img class="card-img-top" src="..." alt="Card image cap" />
+      <div class="card-body">
+        <h5 class="card-title"><%= news[0].title %></h5>
+        <p class="card-text">
+          This is a wider card with supporting text below as a natural lead-in
+          to additional content. This content is a little bit longer.
+        </p>
+        <p class="card-text">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </p>
+      </div>
+    </div>
 
     <!-- jQuery and Bootstrap Bundle (includes Popper) -->
     <script
