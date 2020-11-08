@@ -24,7 +24,8 @@ function getNews() {
 }
 
 app.get("/", async (req, res) => {
-  const news =await getNews();
+  // const news = await getNews();
+  const news = ["Hello", "World"];
   res.render("index", { news: news });
 });
 
