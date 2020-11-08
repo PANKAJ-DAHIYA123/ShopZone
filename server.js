@@ -4,16 +4,9 @@ const { response } = require("express");
 var app = express();
 require("dotenv").config();
 var port = process.env.PORT || 5500;
-
-app.set("view engine", "ejs");
-
-app.set("views", __dirname + "/views");
-
-function getNews() {
+function getNews(key) {
   var url =
-    "http://newsapi.org/v2/top-headlines?" +
-    "country=us&" +
-    "apiKey=46b1aea1d63e44e1a1eaf325874f39c5";
+    "http://newsapi.org/v2/top-headlines?" + "country=us&" + `apiKey=${key}`;
   axios({ url })
     .then((response) => {
       return response.data.articles;
@@ -22,11 +15,15 @@ function getNews() {
       console.log(error);
     });
 }
+app.set("view engine", "ejs");
+
+app.set("views", __dirname + "/views");
 
 app.get("/", (req, res) => {
-  // const news = await getNews();
-  const news = ["Hello", "World"];
-  res.render("index", { news: news });
+  res.render("index", {
+    key: process.env.NEWS_API_KEY,
+    getNews: getNews,
+  });
 });
 
 app.listen(port, () => {
