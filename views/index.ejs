@@ -72,16 +72,22 @@
       </div>
     </nav>
 
-    <div id="newsHolder"></div>
-
-    <!-- Custom JS -->
-    <script>
-      
-      const getNews = "<% getNews %>";
-      const news = (async () => await getNews("<% key %>"))();
-      console.log(news);
-      document.getElementById("newsHolder").innerHTML = news;
-    </script>
+    <div>
+      <% news.forEach((item)=>{%>
+      <div class="card mt-3">
+        <img class="card-img-top" src=<%= item.urlToImage %> alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title"><%= item.title %></h5>
+          <p class="card-text">
+            <%= item.description %>
+          </p>
+          <p class="card-text">
+            <small class="text-muted"><%= item.publishedAt %></small>
+          </p>
+        </div>
+      </div>
+      <%});%>
+    </div>
 
     <!-- jQuery and Bootstrap Bundle (includes Popper) -->
     <script
