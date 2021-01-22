@@ -16,10 +16,24 @@
       crossorigin="anonymous"
     />
 
+    <style>
+      body {
+        padding-top: 50px;
+      }
+    
+      .footer {
+        text-align: center;
+        color: white;
+      }
+    </style>
+
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <title>newszone</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-light fixed-top">
       <a class="navbar-brand font-weight-bold" href="/">Newszone</a>
       <button
         class="navbar-toggler"
@@ -59,11 +73,13 @@
             <a class="nav-link" href="/Health">Health</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0" action="/" method="GET">
+        <form class="form-inline my-2 my-lg-0" action="/Search" method="POST">
           <input
+            id="query"
             class="form-control mr-sm-2"
             type="search"
             placeholder="Search"
+            name="query"
           />
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
             Search
@@ -91,6 +107,13 @@
       </div>
       <%});%>
     </div>
+
+    <footer class="footer fixed-bottom bg-dark">
+      <div class="pl-4">        
+        <h6>Made with <i class="fas fa-heart"></i> by Pankaj Dahiya</h6>
+      </div>
+
+    </footer>
 
     <!-- jQuery and Bootstrap Bundle (includes Popper) -->
     <script
