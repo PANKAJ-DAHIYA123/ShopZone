@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
 })
 router.get("/Search", (req, res) => {
   
-  var url = "http://newsapi.org/v2/everything?" + `q=${req.query.query}&` + `apiKey=${key}`;
+  var url = "http://newsapi.org/v2/everything?" + `q=${req.query.topic}&` + `apiKey=${key}`;
   axios
     .get(url)
     .then((response) => {
