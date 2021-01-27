@@ -49,4 +49,19 @@ router.get("*", (req, res) => {
     });
 });
 
+var UserModel = require('../models/db');
+
+router.post('/signup', (req, res) => {
+    var newUser = new UserModel({UserId:101, 
+      FirstName: req.body.firstname, LastName:req.body.lastname,EmailId:req.body.email ,Password:req.body.Password});
+
+    newUser.save((err, data)=> {
+        if(err) {
+            console.log(error);
+        }
+        else {
+            res.send("Data inserted");
+        }
+    });
+});
 module.exports = router;
