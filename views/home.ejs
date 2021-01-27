@@ -8,6 +8,9 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
+    <!-- Favicon -->
+    <link rel="icon" href="/img/logo.ico">
+
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -33,62 +36,6 @@
     <title>newszone</title>
   </head>
   <body>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-light fixed-top">
-      <a class="navbar-brand font-weight-bold" href="/">Newszone</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarTogglerDemo02"
-        aria-controls="navbarTogglerDemo02"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link" href="/"
-              >Home<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/Business">Business</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/Technology">Technology</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/Entertainment">Entertainment</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/Sports">Sports</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/Science">Science</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/Health">Health</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/login">Login</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0" action="/Search" method="GET">
-          <input
-            class="form-control mr-sm-2"
-            type="search"
-            placeholder="Search"
-            name="topic"
-          />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-            Search
-          </button>
-        </form>
-      </div>
-    </nav>
-
     <div>
       <% news.forEach((item)=>{%>
       <div class="row no-gutters bg-light position-relative">
@@ -108,13 +55,6 @@
       </div>
       <%});%>
     </div>
-
-    <footer class="footer bg-dark">
-      <div class="pl-4">        
-        <h1>Made with <i class="fas fa-heart"></i> by Pankaj Dahiya</h1>
-      </div>
-
-    </footer>
 
     <!-- jQuery and Bootstrap Bundle (includes Popper) -->
     <script

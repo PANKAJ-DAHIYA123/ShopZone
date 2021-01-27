@@ -10,7 +10,7 @@ router.get("/", (req, res) => {
   axios
     .get(url)
     .then((response) => {
-      res.render("index", { news: response.data.articles });
+      res.render("home", { news: response.data.articles });
     })
     .catch((error) => {
       console.log(error);
@@ -18,6 +18,9 @@ router.get("/", (req, res) => {
 });
 router.get("/login", (req, res) => {
   res.render("login");
+});
+router.get("/signup", (req, res) => {
+  res.render("signup");
 });
 router.get("/Search", (req, res) => {
   var url =
@@ -27,7 +30,7 @@ router.get("/Search", (req, res) => {
   axios
     .get(url)
     .then((response) => {
-      res.render("index", { news: response.data.articles });
+      res.render("home", { news: response.data.articles });
     })
     .catch((error) => {
       console.log(error);
@@ -39,7 +42,7 @@ router.get("*", (req, res) => {
   axios
     .get(url)
     .then((response) => {
-      res.render("index", { news: response.data.articles });
+      res.render("home", { news: response.data.articles });
     })
     .catch((error) => {
       console.log(error);
