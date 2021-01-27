@@ -54,8 +54,8 @@ router.post('/signup', (req, res) => {
     });
 });
 
-router.get("Business", (req, res) => {
-  var url = "http://newsapi.org/v2/everything?" + `q=Business&` + `apiKey=${key}`;
+router.get("/Business", (req, res) => {
+  var url = "http://newsapi.org/v2/everything?" + `q=business&` + `apiKey=${key}`;
   axios
     .get(url)
     .then((response) => {
@@ -66,7 +66,7 @@ router.get("Business", (req, res) => {
     });
 });
 
-router.get("Technology", (req, res) => {
+router.get("/Technology", (req, res) => {
   var url = "http://newsapi.org/v2/everything?" + `q=technology&` + `apiKey=${key}`;
   axios
     .get(url)
@@ -78,7 +78,7 @@ router.get("Technology", (req, res) => {
     });
 });
 
-router.get("Entertainment", (req, res) => {
+router.get("/Entertainment", (req, res) => {
   var url = "http://newsapi.org/v2/everything?" + `q=entertainment&` + `apiKey=${key}`;
   axios
     .get(url)
@@ -90,7 +90,7 @@ router.get("Entertainment", (req, res) => {
     });
 });
 
-router.get("Sports", (req, res) => {
+router.get("/Sports", (req, res) => {
   var url = "http://newsapi.org/v2/everything?" + `q=sports&` + `apiKey=${key}`;
   axios
     .get(url)
@@ -102,7 +102,7 @@ router.get("Sports", (req, res) => {
     });
 });
 
-router.get("Science", (req, res) => {
+router.get("/Science", (req, res) => {
   var url = "http://newsapi.org/v2/everything?" + `q=science&` + `apiKey=${key}`;
   axios
     .get(url)
@@ -114,7 +114,7 @@ router.get("Science", (req, res) => {
     });
 });
 
-router.get("Health", (req, res) => {
+router.get("/Health", (req, res) => {
   var url = "http://newsapi.org/v2/everything?" + `q=health&` + `apiKey=${key}`;
   axios
     .get(url)
