@@ -7,7 +7,7 @@ const indexRouter = require("./routes/index");
 require("dotenv").config();
 var port = process.env.PORT || 5500;
 
-app.use(express.urlencoded());
+app.use(express.urlencoded({extended:true}));
 app.use(express.static('public'));
 
 app.set("view engine", "ejs");

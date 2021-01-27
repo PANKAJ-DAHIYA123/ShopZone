@@ -4,7 +4,7 @@ const axios = require("axios");
 require("dotenv").config();
 var key = process.env.NEWS_API_KEY;
 
-router.get("/", (req, res) => {
+router.get("*", (req, res) => {
   var url =
     "http://newsapi.org/v2/top-headlines?" + "country=in&" + `apiKey=${key}`;
   axios
@@ -37,17 +37,6 @@ router.get("/Search", (req, res) => {
     });
 });
 
-router.get("*", (req, res) => {
-  var url = "http://newsapi.org/v2/everything?" + `q=health&` + `apiKey=${key}`;
-  axios
-    .get(url)
-    .then((response) => {
-      res.render("home", { news: response.data.articles });
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-});
 
 var UserModel = require('../models/db');
 
@@ -62,6 +51,78 @@ router.post('/signup', (req, res) => {
         else {
             res.send("Data inserted");
         }
+    });
+});
+
+router.get("Business", (req, res) => {
+  var url = "http://newsapi.org/v2/everything?" + `q=Business&` + `apiKey=${key}`;
+  axios
+    .get(url)
+    .then((response) => {
+      res.render("home", { news: response.data.articles });
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+});
+
+router.get("Technology", (req, res) => {
+  var url = "http://newsapi.org/v2/everything?" + `q=technology&` + `apiKey=${key}`;
+  axios
+    .get(url)
+    .then((response) => {
+      res.render("home", { news: response.data.articles });
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+});
+
+router.get("Entertainment", (req, res) => {
+  var url = "http://newsapi.org/v2/everything?" + `q=entertainment&` + `apiKey=${key}`;
+  axios
+    .get(url)
+    .then((response) => {
+      res.render("home", { news: response.data.articles });
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+});
+
+router.get("Sports", (req, res) => {
+  var url = "http://newsapi.org/v2/everything?" + `q=sports&` + `apiKey=${key}`;
+  axios
+    .get(url)
+    .then((response) => {
+      res.render("home", { news: response.data.articles });
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+});
+
+router.get("Science", (req, res) => {
+  var url = "http://newsapi.org/v2/everything?" + `q=science&` + `apiKey=${key}`;
+  axios
+    .get(url)
+    .then((response) => {
+      res.render("home", { news: response.data.articles });
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+});
+
+router.get("Health", (req, res) => {
+  var url = "http://newsapi.org/v2/everything?" + `q=health&` + `apiKey=${key}`;
+  axios
+    .get(url)
+    .then((response) => {
+      res.render("home", { news: response.data.articles });
+    })
+    .catch((error) => {
+      console.log(error);
     });
 });
 module.exports = router;
