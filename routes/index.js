@@ -6,7 +6,7 @@ var key = process.env.NEWS_API_KEY;
 
 router.get("/", (req, res) => {
   var url =
-    "http://newsapi.org/v2/top-headlines?" + "country=in&" + `apiKey=${key}`;
+    "http://newsapi.org/v2/top-headlines?" + "country=us&" + `apiKey=${key}`;
   axios
     .get(url)
     .then((response) => {
